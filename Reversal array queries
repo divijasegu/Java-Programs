@@ -1,0 +1,24 @@
+public class Main
+{
+	public static void main(String[] args) {
+		int arr[] = {1,2,3,4,5,6};
+		int n = arr.length;
+		A a = new A();
+		a.reverse(arr,0,1);
+		a.reverse(arr,1,3);
+		System.out.println(java.util.Arrays.toString(arr));
+	}
+}
+class A{
+    public static void reverse(int arr[],int left,int right){
+        while(left<=right){
+            int temp = arr[left];
+            arr[left] = arr[right];
+            arr[right] = temp;
+            left++;
+            right--;
+        }
+    }
+}
+
+//output: [2, 4, 3, 1, 5, 6]
