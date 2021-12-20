@@ -1,0 +1,34 @@
+import java.util.*;
+
+public class Main
+{
+	public static void main(String[] args) {
+       String s1 ="DIVIJA";
+       String s2 = "DJIIVI";
+       System.out.println(anagram(s1,s2));
+           
+       }
+       
+       
+    static boolean anagram(String s1,String s2){
+        int len = s1.length();
+        int len2 = s2.length();
+         if(len!=len2){
+             return false;
+         }
+        char[] a =s1.toCharArray();
+        Arrays.sort(a);
+        String s3 = new String(a);
+        char[]b = s2.toCharArray();
+        Arrays.sort(b);
+        String s4 = new String(b);
+        return (s3.equals(s4));
+        
+         
+
+    }
+      
+}
+
+output:
+false
